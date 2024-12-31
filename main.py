@@ -4,13 +4,11 @@ from tkinter import filedialog
 from tkPDFViewer import tkPDFViewer as pdf
 import os
 
-#instalizing tk
 root = Tk()
 root.geometry("630x700+400+100")
 root.title("PDF Viewer")
 root.configure(bg="white")
 
-#main part of program
 def browseFiles():
     filename = filedialog.askopenfilename(initialdir=os.getcwd(),title="select pdf file",filetypes=(("PDF File",".pdf"),("PDF File",".PDF"),(("All File",".txt"))))
     v1=pdf.ShowPdf()
